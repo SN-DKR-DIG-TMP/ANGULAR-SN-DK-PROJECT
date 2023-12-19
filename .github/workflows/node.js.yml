@@ -25,7 +25,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm run build
-    - run: npm test
+    - run: npm run test:headless
       env:
         CI: true
   windows-build:
@@ -44,6 +44,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm run build
-    - run: npm test
+    - run: npm run test:headless
       env:
         CI: true
